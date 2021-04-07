@@ -28,19 +28,30 @@
 
 // console.log(nameIndex);
 
+// const prices = [10.99, 5.99, 3.95, 6.69];
+
+// const tax = 0.19;
+
+// const taxPrices = [];
+
+// // for (const price of prices) {
+// //   taxPrices.push(price * (1 + tax));
+// // }
+
+// prices.forEach((price, idx, prices) => {
+//   const priceObj = { index: idx, taxPrice: price * (1 + tax) };
+//   taxPrices.push(priceObj);
+// });
+
+// console.log(taxPrices);
+
 const prices = [10.99, 5.99, 3.95, 6.69];
 
 const tax = 0.19;
 
-const taxPrices = [];
-
-// for (const price of prices) {
-//   taxPrices.push(price * (1 + tax));
-// }
-
-prices.forEach((price, idx, prices) => {
+const taxPrices = prices.map((price, idx, prices) => {
   const priceObj = { index: idx, taxPrice: price * (1 + tax) };
-  taxPrices.push(priceObj);
+  return priceObj;
 });
 
-console.log(taxPrices);
+console.log(prices, taxPrices);
