@@ -54,4 +54,15 @@ const taxPrices = prices.map((price, idx, prices) => {
   return priceObj;
 });
 
-console.log(prices, taxPrices);
+// console.log(prices, taxPrices);
+
+const sortedPrices = prices.sort((n1, n2) => {
+  if (n1 > n2) {
+    return 1;
+  } else if (n1 === n2) {
+    return 0;
+  } else {
+    return -1;
+  }
+});
+console.log(sortedPrices.reverse());
