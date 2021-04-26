@@ -110,3 +110,10 @@ persons.push({ name: 'Lu', age: '47' });
 persons[0].age = 31;
 
 console.log(persons, copiedPersons);
+
+const nameData = ['Erick', 'Silva', 'Mr', 23];
+
+// '...otherInfo' is being used with the rest operator, which will map the rest of the arguments into a single array
+const [firstName, lastName, ...otherInfo] = nameData;
+
+console.log(firstName, lastName, otherInfo);
