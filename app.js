@@ -86,3 +86,27 @@ console.log(transformedData);
 const nameFrags = ['Erick', 'Silva'];
 const name = nameFrags.join(' ');
 console.log(name);
+
+const copiedNameFrags = [...nameFrags];
+nameFrags.push('Mr.');
+// 'Mr.' has not been pushed to the second argument because the spread operator does not create a new array, but copies the addresses of the original one
+console.log(nameFrags, copiedNameFrags);
+
+// the spread operator can turn an array of values into a list, when necessary
+console.log(Math.min(...prices));
+
+const persons = [
+  { name: 'Werick', age: 23 },
+  { name: 'Jilbyrto', age: 24 },
+];
+
+// .map will make a new copy of the original array, creating new addresses. And in this case, saving the original content since there were modifications on the values
+const copiedPersons = persons.map(person => ({
+  name: person.name,
+  age: person.age,
+}));
+
+persons.push({ name: 'Lu', age: '47' });
+persons[0].age = 31;
+
+console.log(persons, copiedPersons);
