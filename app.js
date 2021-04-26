@@ -74,3 +74,15 @@ console.log(filteredPrices);
 const sum = prices.reduce((prevValue, currValue) => prevValue + currValue, 0);
 
 console.log(sum);
+
+const data = 'NYC;99.95;5000';
+
+const transformedData = data.split(';');
+
+transformedData[1] = +transformedData[1];
+
+console.log(transformedData);
+
+const nameFrags = ['Erick', 'Silva'];
+const name = nameFrags.join(' ');
+console.log(name);
