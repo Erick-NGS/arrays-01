@@ -39,6 +39,14 @@ persons.add(person);
 
 // random operations
 
-person = null;
+// person = null;
 
 console.log(persons);
+
+// creates a map, but if the value of said map is no longer needed, it allows for the change of the value in the weakMap to null, for example, and makes it possible for JS garbage collector to work removing that value from memory, cleaning space in memory
+const personData = new WeakMap();
+personData.set(person, 'anything');
+
+person = null;
+
+console.log(personData);
